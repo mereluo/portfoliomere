@@ -22,6 +22,7 @@ export default class ScrollService {
 
         contactMeScreen.scrollIntoView({ behavior: "smooth" });
     };
+
     scrollToHome = () => {
         let homeScreen = document.getElementById("Home");
         if (!homeScreen) return;

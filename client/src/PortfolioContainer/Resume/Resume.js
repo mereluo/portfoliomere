@@ -150,7 +150,7 @@ function Resume(props) {
     const getBullets = () => {
         return resumeBullets.map((bullet, index) => (
             <div onClick={() => handleCarousal(index)} className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"} key={index}>
-                <img className="bullet-logo" src={require(`../../assets/Resume/${bullet.logoSrc}`).default} alt="B" />
+                <img className="bullet-logo" src={require(`../../assets/Resume/${bullet.logoSrc}`)} alt="B" />
                 <span className="bullet-label">{bullet.label}</span>
             </div>
         ));
@@ -174,7 +174,7 @@ function Resume(props) {
     return (
         <div className="resume-container screen-container " id={props.id || ""}>
             <div className="resume-content">
-                <ScreenHeading title={"Resume"} subHeading={"My Background"} />
+                <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
                 <div className="resume-card">
                     <div className="resume-bullets">
                         <div className="bullet-container">
