@@ -10,20 +10,14 @@ export default function Profile() {
                 <div className="profile-details">
                     <div className="colz">
                         <div className="colz-icon">
-                            <a href="https://web.facebook.com/?_rdc=1&_rdr">
-                                <i className="fa fa-facebook-square" />
+                            <a href="https://www.linkedin.com/in/yu-meredith-luo/">
+                                <i className="fa fa-linkedin-square" />
                             </a>
-                            <a href="https://web.facebook.com/?_rdc=1&_rdr">
-                                <i className="fa fa-google-plus-square" />
+                            <a href="https://github.com/mereluo">
+                                <i className="fa fa-github-square" />
                             </a>
-                            <a href="https://www.instagram.com/instructor_ehizeex/">
+                            <a href="https://www.instagram.com/mere.kozy/">
                                 <i className="fa fa-instagram" />
-                            </a>
-                            <a href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA">
-                                <i className="fa fa-youtube-square" />
-                            </a>
-                            <a href="https://twitter.com/Ehiedu_baba">
-                                <i className="fa fa-twitter" />
                             </a>
                         </div>
                     </div>
@@ -35,9 +29,9 @@ export default function Profile() {
                     <div className="profile-details-role">
                         <span className="primary-text">
                             <h1>
-                                <Typical loop={Infinity} steps={["Enthusiastic Dev 😎", 1000, "Full stack Developer 💻", 1000, "React/React Native 🌐", 2000]} />
+                                <Typical loop={Infinity} steps={["Passionate Coder 🚀", 2000, "Full stack Developer 💻", 2000, "C++ Enthusiast 💡", 2000]} />
                             </h1>
-                            <span className="profile-role-tagline">Knack of building applications with front and back end operations.</span>
+                            <span className="profile-role-tagline">Proficient in building apps with integrated front-end and back-end functionalities</span>
                         </span>
                     </div>
                     <div className="profile-options">

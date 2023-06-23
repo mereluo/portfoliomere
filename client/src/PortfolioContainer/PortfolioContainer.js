@@ -1,5 +1,6 @@
 import React from "react";
 import { TOTAL_SCREENS } from "../utilities/commonUtils";
+// import Footer from "../PortfolioContainer/Footer/Footer";
 
 function PortfolioContainer() {
     const mapAllScreens = () => {

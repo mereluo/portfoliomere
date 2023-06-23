@@ -40,7 +40,6 @@ function Resume(props) {
         { label: "Work Experience", logoSrc: "work-history.svg" },
         { label: "Programming Skills", logoSrc: "programming-skills.svg" },
         { label: "Projects", logoSrc: "projects.svg" },
-        { label: "Interests", logoSrc: "interests.svg" },
     ];
 
     const programmingSkillsDetails = [
@@ -82,11 +81,10 @@ function Resume(props) {
 
     const resumeDetails = [
         <div className="resume-screen-container" key="education">
-            <ResumeHeading heading={"Northeastern University"} subHeading={"Master of Science in Computer Science"} fromDate={"2023"} toDate={"2025"} />
+            <ResumeHeading heading={"Northeastern University-Seattle Campus"} subHeading={"Master of Science in Computer Science"} fromDate={"2023"} toDate={"2025"} />
 
             <ResumeHeading heading={"Seattle University"} subHeading={"Certificate in Computer Science"} fromDate={"2022"} toDate={"2023"} />
-            <ResumeHeading heading={"University of Washington"} subHeading={"Master in Measurement and Statistics"} fromDate={"2019"} toDate={"2022"} />
-            <ResumeHeading heading={"Lawrence University"} subHeading={"Bachelor of Arts in Neuroscience"} fromDate={"2015"} toDate={"2019"} />
+            <ResumeHeading heading={"University of Washington-Seattle"} subHeading={"Master in Measurement and Statistics"} fromDate={"2019"} toDate={"2022"} />
         </div>,
 
         /* WORK EXPERIENCE */
@@ -127,17 +125,10 @@ function Resume(props) {
                 <ResumeHeading key={index} heading={projectsDetails.title} subHeading={projectsDetails.subHeading} description={projectsDetails.description} fromDate={projectsDetails.duration.fromDate} toDate={projectsDetails.duration.toDate} />
             ))}
         </div>,
-
-        /* Interests */
-        <div className="resume-screen-container" key="interests">
-            <ResumeHeading heading="Hiking" description="I love exploring various PNW trials" />
-            <ResumeHeading heading="Pixel Art" description="Appreciate the nostalgic feeling brought by pixel art" />
-            <ResumeHeading heading="Snowboarding" description="Speed and furious" />
-        </div>,
     ];
 
     const handleCarousal = (index) => {
-        let offsetHeight = 360;
+        let offsetHeight = 600;
 
         let newCarousalOffset = {
             style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
@@ -174,7 +165,7 @@ function Resume(props) {
     return (
         <div className="resume-container screen-container " id={props.id || ""}>
             <div className="resume-content">
-                <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
+                <ScreenHeading title={"Resume"} subHeading={"My Background and Projects"} />
                 <div className="resume-card">
                     <div className="resume-bullets">
                         <div className="bullet-container">

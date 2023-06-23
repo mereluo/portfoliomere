@@ -13,9 +13,11 @@ export default function AboutMe(props) {
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTSANTS = {
-        description: "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
+        description: "As a driven Master's student in Computer Science at Northeastern University, ",
+        description1: "I am proficient in object-oriented programming, data structures, algorithms, and practical experience in C++, React/Next with JavaScript. ",
+        description2: "I am eager to join a team where I can make a tangible impact and help shape the future of technology.",
         highlights: {
-            bullets: ["Full Stack web and mobile development", "Interactive Front End as per the design", "React and React Native", "Redux for State Mnanagement", "Building REST API", "Managing database"],
+            bullets: ["Full Stack web development", "Interactive Front End", "React/Next.js", "Building RESTful API", "Managing database"],
             heading: "Here are a Few Highlights:",
         },
     };
@@ -31,13 +33,17 @@ export default function AboutMe(props) {
     return (
         <div className="about-me-container screen-container" id={props.id || ""}>
             <div className="about-me-parent">
-                <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
+                <ScreenHeading title={"About Me"} subHeading={"Reasons for choosing me"} />
                 <div className="about-me-card">
                     <div className="about-me-profile"></div>
                     <div className="about-me-details">
-                        <span className="about-me-description">{SCREEN_CONSTSANTS.description}</span>
+                        <div className="about-me-description">
+                            {SCREEN_CONSTSANTS.description} <br />
+                            {SCREEN_CONSTSANTS.description1} <br />
+                            {SCREEN_CONSTSANTS.description2}
+                        </div>
                         <div className="about-me-highlights">
-                            <div className="highlight-heading">
+                            <div className="highlght-heading">
                                 <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
                             </div>
                             {renderHighlight()}
@@ -48,7 +54,7 @@ export default function AboutMe(props) {
                                 Hire Me{" "}
                             </button>
 
-                            <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
+                            <a href="ResumeMeredithLuo.pdf" download="Meredith Luo.pdf">
                                 <button className="btn highlighted-btn">Get Resume</button>
                             </a>
                         </div>

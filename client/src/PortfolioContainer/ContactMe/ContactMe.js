@@ -8,7 +8,7 @@ import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animation";
-// import Footer from "../../PortfolioContainer/footer/Footer";
+import Footer from "../../PortfolioContainer/Footer/Footer";
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
@@ -69,7 +69,7 @@ export default function ContactMe(props) {
             <div className="central-form">
                 <div className="col">
                     <h2 className="title">
-                        <Typical loop={Infinity} steps={["Get In Touch 📧", 2000, "Send me an email", 2000]} />
+                        <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
                     </h2>{" "}
                 </div>
                 <div className="back-form">
@@ -104,7 +104,7 @@ export default function ContactMe(props) {
                     </form>
                 </div>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }
