@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 670px;
-    background-image: url("../../assets/Home/bg.png");
+    /* background-image: url("../../assets/Home/bg.png"); */
+    background: linear-gradient(89deg, #003c63 30%, #3ecada 100%);
     /* background-size: cover; */
 }

@@ -38,7 +38,7 @@ export default function AboutMe(props) {
                     <div className="about-me-profile"></div>
                     <div className="about-me-details">
                         <div className="about-me-description">
-                            {SCREEN_CONSTSANTS.description} <br />
+                            {SCREEN_CONSTSANTS.description}
                             {SCREEN_CONSTSANTS.description1} <br />
                             {SCREEN_CONSTSANTS.description2}
                         </div>

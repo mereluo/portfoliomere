@@ -17,6 +17,7 @@ function Resume(props) {
 
     /* REUSABLE MINOR COMPONENTS */
     const ResumeHeading = (props) => {
+        console.log(props);
         return (
             <div className="resume-heading">
                 <div className="resume-main-heading">
@@ -29,6 +30,11 @@ function Resume(props) {
                 </div>
                 <div className="resume-heading-description">
                     <span>{props.description ? props.description : ""}</span>
+                    <div>
+                        <a href={props.link} style={{ color: "#003c63" }}>
+                            {props.link ? "(GitHub Link)" : ""}
+                        </a>
+                    </div>
                 </div>
             </div>
         );
@@ -36,74 +42,68 @@ function Resume(props) {
 
     /* STATIC RESUME DATA FOR THE LABELS*/
     const resumeBullets = [
-        { label: "Education", logoSrc: "education.svg" },
-        { label: "Work Experience", logoSrc: "work-history.svg" },
+        { label: "Personal Projects", logoSrc: "projects.svg" },
+        { label: "Education background", logoSrc: "education.svg" },
         { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-        { label: "Projects", logoSrc: "projects.svg" },
+        { label: "Work Experience", logoSrc: "work-history.svg" },
     ];
 
     const programmingSkillsDetails = [
         { skill: "JavaScript", ratingPercentage: 85 },
-        { skill: "React JS", ratingPercentage: 85 },
+        { skill: "React.js", ratingPercentage: 85 },
+        { skill: "Node.js", ratingPercentage: 80 },
         { skill: "C++", ratingPercentage: 90 },
         { skill: "Java", ratingPercentage: 85 },
         { skill: "C#", ratingPercentage: 75 },
-        { skill: "Node JS", ratingPercentage: 70 },
         { skill: "MongoDB", ratingPercentage: 70 },
+        { skill: "Postgres", ratingPercentage: 70 },
+        { skill: "mySQL", ratingPercentage: 80 },
     ];
 
     const projectsDetails = [
         {
+            title: "Face Identifier",
+            duration: { fromDate: "Jun. 2023", toDate: "Jul. 2023" },
+            description: "Developed a secure full-stack web app that enabled user registration, login, and accurate detection of multiple faces from picture URLs using the Clarifai API; Employed PostgreSQL for efficient user data storage and retrieval; designed robust database tables and implemented a RESTful API using Express.js",
+            subHeading: "Built with JavaScript, PostgreSQL, Express.js",
+            link: "https://github.com/mereluo/face-identifier",
+        },
+        {
             title: "Personal Portfolio Website",
             duration: { fromDate: "Mar. 2023", toDate: "Apr. 2023" },
-            description: "An Intuitive and interactive personal portfolio website to showcase my background",
-            subHeading: "Built with React JS, Bootstrap, RxJS, Node JS, Heroku",
+            description: "An Intuitive and interactive personal portfolio website to showcase my background; This website!",
+            subHeading: "Built with React JS, Bootstrap, RxJS, Node JS",
+            link: "https://github.com/mereluo/portfoliomere",
         },
         {
             title: "StoryLand (Online Story Book)",
             duration: { fromDate: "Feb. 2023", toDate: "Mar. 2023" },
             description: "A web-based application powered by OpenAI to generate personalized stories with illustrations for children of age 5-10",
             subHeading: "Built with React JS, OpenAI API",
+            link: "https://github.com/mereluo/TeachMe",
         },
         {
             title: "SeattleBot",
             duration: { fromDate: "Dec. 2022", toDate: "Jan. 2023" },
-            description: "A Facebook messenger bot reports real-time Seattle weather and recommends Seattle restaurants based on user cuisine preferences",
+            description: "A Facebook messenger bot reports real-time Seattle weather and recommends Seattle restaurants based on user cuisine preferences; Deployed and maintained the bot's functionality and security through GitHub CI/CD actions, Docker, and DigitalOcean",
             subHeading: "Built with Python, FastAPI, Docker, DigitalOcean",
-        },
-        {
-            title: "CapitolCraving",
-            duration: { fromDate: "Oct. 2022", toDate: "Nov. 2022" },
-            description: "A relational database system that manages and analyzes data on local cookie bakeries",
-            subHeading: "Built with mySQL, Java",
+            link: "https://github.com/GaryHo34/SeattleBot",
         },
     ];
 
     const resumeDetails = [
-        <div className="resume-screen-container" key="education">
-            <ResumeHeading heading={"Northeastern University-Seattle Campus"} subHeading={"Master of Science in Computer Science"} fromDate={"2023"} toDate={"2025"} />
-
-            <ResumeHeading heading={"Seattle University"} subHeading={"Certificate in Computer Science"} fromDate={"2022"} toDate={"2023"} />
-            <ResumeHeading heading={"University of Washington-Seattle"} subHeading={"Master in Measurement and Statistics"} fromDate={"2019"} toDate={"2022"} />
+        /* PROJECTS */
+        <div className="resume-screen-container" key="projects">
+            {projectsDetails.map((projectsDetails, index) => (
+                <ResumeHeading key={index} heading={projectsDetails.title} subHeading={projectsDetails.subHeading} description={projectsDetails.description} fromDate={projectsDetails.duration.fromDate} toDate={projectsDetails.duration.toDate} link={projectsDetails.link} />
+            ))}
         </div>,
 
-        /* WORK EXPERIENCE */
-        <div className="resume-screen-container" key="work-experience">
-            <div className="experience-container">
-                <ResumeHeading heading={"Seattle University"} subHeading={"Teaching Assistant"} fromDate={"2022"} toDate={"2023"} />
-                <div className="experience-description">
-                    <span className="resume-description-text">Teaching assitant for Java Introduction Classes</span>
-                    <span className="resume-description-text">Assisting instructor with in-class activities, grading assignments, and leading group tutoring</span>
-                </div>
-                <div className="experience-description">
-                    <span className="resume-description-text">- Developed an ecommerce website for client with the dashboard for managing the products, managing reviews, users, payment etc. .</span>
-                    <br />
-                    <span className="resume-description-text">- Integrated the web app with backend services to create new user onboarding application with dynamic form content. </span>
-                    <br />
-                    <span className="resume-description-text">- I stretch my mental capacity to develope UI as per the given designs.</span>
-                    <br />
-                </div>
-            </div>
+        /* EDUCATION */
+        <div className="resume-screen-container" key="education" id="education">
+            <ResumeHeading heading={"Northeastern University-Seattle Campus"} subHeading={"Master of Science in Computer Science"} fromDate={"2023"} toDate={"2025"} description={"GPA: 4.0/4.0"} />
+            <ResumeHeading heading={"Seattle University"} subHeading={"Certificate in Computer Science"} fromDate={"2022"} toDate={"2023"} description={"GPA: 4.0/4.0"} />
+            <ResumeHeading heading={"University of Washington-Seattle"} subHeading={"Master in Measurement and Statistics"} fromDate={"2019"} toDate={"2022"} description={"GPA: 3.9/4.0"} />
         </div>,
 
         /* PROGRAMMING SKILLS */
@@ -119,11 +119,28 @@ function Resume(props) {
             ))}
         </div>,
 
-        /* PROJECTS */
-        <div className="resume-screen-container" key="projects">
-            {projectsDetails.map((projectsDetails, index) => (
-                <ResumeHeading key={index} heading={projectsDetails.title} subHeading={projectsDetails.subHeading} description={projectsDetails.description} fromDate={projectsDetails.duration.fromDate} toDate={projectsDetails.duration.toDate} />
-            ))}
+        /* WORK EXPERIENCE */
+        <div className="resume-screen-container" key="work-experience">
+            <div className="experience-container">
+                <ResumeHeading heading={"Teaching Assistant"} subHeading={"Seattle University"} fromDate={"2022"} toDate={"2023"} />
+                <div className="experience-description">
+                    <span className="resume-description-text">Teaching Assistant for CPSC 5001 and CPSC 5002: Programming Boot Camp I and II, teaching Java programming </span>
+                    <br />
+                    <span className="resume-description-text">- Provided thorough and constructive feedback on assignments, maintaining consistent grading standards</span>
+                    <br />
+                    <span className="resume-description-text">- Conducted individual and group tutoring sessions, clarifying programming concepts and troubleshooting coding challenges</span>
+                </div>
+            </div>
+            <div className="experience-container">
+                <ResumeHeading heading={"Graduate Research Assistant"} subHeading={"University of Washington"} fromDate={"2020"} toDate={"2022"} />
+                <div className="experience-description">
+                    <span className="resume-description-text">Collaborated with UW Computer Science department and Educational Testing Service (ETS) on math and programming education research </span>
+                    <br />
+                    <span className="resume-description-text">- Analyzed extensive keystroke data from 220 undergraduate students’ programming assignments</span>
+                    <br />
+                    <span className="resume-description-text">- Utilized data visualization tools, such as Python libraries (e.g., Matplotlib, Seaborn), to facilitate easier interpretation and communication of findings</span>
+                </div>
+            </div>
         </div>,
     ];
 

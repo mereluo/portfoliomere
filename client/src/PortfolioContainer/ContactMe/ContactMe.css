@@ -6,31 +6,31 @@
 }
 
 .central-form {
-    max-width: 1100px;
-    padding: 10px;
+    max-width: 900px;
+    padding: 15px;
     display: flex;
-    box-shadow: 0 0px 20px -2px #1f2235;
-    border-radius: 12px;
+    box-shadow: 0 0px 15px -2px #003c63;
+    border-radius: 20px;
     margin: 0 auto;
     flex-direction: column;
     justify-content: center;
-    background-color: #1f2235;
+    background-color: #6a92ad6c;
 }
 
 .central-form h2 {
-    color: #fff;
+    color: #0f0d0d;
     font-family: "Poppins Bold";
     letter-spacing: 0.2rem;
     margin-bottom: 20px;
 }
 
-.back-form {
+/* .back-form {
     max-width: 380px;
-    margin: 0 auto;
-}
+    margin: 0 0;
+} */
 
-.back-form .img-back {
-    width: 100%;
+/* .back-form .img-back {
+    width: 80%;
     margin-bottom: 20px;
 }
 
@@ -39,27 +39,28 @@
     font-weight: 400;
     color: white;
     font-size: 18px;
-    opacity: 0.5;
-}
+    opacity: 0.7;
+} */
 
-.back-form .img-back img {
-    width: 100%;
+/* .back-form .img-back img {
+    width: 90%;
     opacity: 0.5;
-}
+} */
 
 .central-form form {
-    width: auto;
-    box-shadow: 0 0 2px 1px white;
+    width: 800px;
+    /* box-shadow: 0 0 2px 1px white; */
     display: flex;
     color: #111;
-    padding: 15px;
+    padding: 20px;
     justify-content: center;
     flex-direction: column;
-    margin-top: -52px;
+    margin-top: -40px;
+    margin-left: 75px;
     opacity: 0.9;
     background-color: white;
-    box-shadow: 0 0px 20px -2px #1f2235;
-    border-radius: 12px;
+    /* box-shadow: 0 0px 20px -2px #1f2235; */
+    border-radius: 20px;
 }
 
 form p {
@@ -78,7 +79,7 @@ form label {
 
 form input,
 textarea {
-    width: 100%;
+    width: auto;
     border: 2px solid rgba(0, 0, 0, 0);
     outline: none;
     background-color: rgba(230, 230, 230, 0.6);
@@ -104,10 +105,9 @@ form button {
     outline: none;
     width: 900px;
     color: rgb(230, 227, 227);
-    border: 2px solid #ff5823;
     font-size: 12px;
     border-radius: 19px;
-    background-color: #1f2235;
+    background-color: #003c63;
     font-size: 18px;
     width: 160px;
     align-items: center;
@@ -115,9 +115,8 @@ form button {
 }
 
 form button:hover {
-    background-color: #1f2235;
-    transition: all ease 1s;
-    border: 2px solid #1f2235;
+    background-color: #003c63;
+    border: 2px solid #ff5823;
 }
 
 button .load {
@@ -145,14 +144,24 @@ button .load img {
         margin-top: 30px;
     }
 
-    .img-back {
+    /* .img-back {
         flex: 1;
         align-self: center;
         margin-right: 20px;
-    }
-
+    } */
     form {
         flex: 0.9;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .main-container {
+        padding: 0 10%;
+    }
+    .central-form form {
+        width: 100%;
+        margin-top: -10px;
+        margin-left: 0px;
     }
 }
 @media screen and (max-width: 414px) {

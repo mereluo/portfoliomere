@@ -6,14 +6,15 @@
     margin: 10px 0 0 0;
 }
 .about-me-parent {
-    max-width: 1000px;
-    width: 100%;
+    max-width: 900px;
+    width: 90%;
 }
 .about-me-card {
     display: flex;
-    width: 110%;
-    height: 700px;
-    box-shadow: 0 0 15px -3px #1f2235;
+    width: 100%;
+    height: 550px;
+    box-shadow: 0 0 15px -3px #c48459;
+    border-radius: 20px;
 }
 .about-me-profile {
     width: 40%;
@@ -28,9 +29,9 @@
     padding: 30px;
 }
 .about-me-description {
-    line-height: 29px;
+    line-height: 25px;
     text-align: left;
-    font-size: 18px;
+    font-size: 14px;
     font-family: "Poppins Medium";
 }
 .about-me-highlights {
@@ -42,10 +43,11 @@
     margin: 0 0 0 0;
 }
 .highlight {
-    font-size: 18px;
+    font-size: 15px;
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    margin: 0 0 0 0;
+    font-family: "Poppins Medium";
 }
 .highlight-blob {
     height: 10px;
