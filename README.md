@@ -18,15 +18,12 @@ To run the project locally, follow these steps:
 1. **Clone the repository:** Begin by cloning this repository to your local machine using the following command: `git clone https://github.com/mereluo/portfoliomere.git`
 
 2. **Install Dependencies:** Navigate to the project directory and install the necessary dependencies using npm:
+   `cd portfoliomere`
+   `npm install`
+   `cd client`
+   `npm install`
 
-`cd portfoliomere`
-`npm install`
-`cd client`
-`npm install`
-
-3. **Start the Development Server:** Once the dependencies are installed, start the development server:
-
-`npm start`
+4. **Start the Development Server:** Once the dependencies are installed, start the development server: `npm start`
 
 The website should now be accessible on `http://localhost:3000` in your web browser.
 
