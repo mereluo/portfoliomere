@@ -136,7 +136,7 @@ function Resume(props) {
                 <div className="experience-description">
                     <span className="resume-description-text">Collaborated with UW Computer Science department and Educational Testing Service (ETS) on math and programming education research </span>
                     <br />
-                    <span className="resume-description-text">- Analyzed extensive keystroke data from 220 undergraduate students’ programming assignments</span>
+                    <span className="resume-description-text">- Analyzed extensive keystroke data from 220 undergraduate students‘ programming assignments</span>
                     <br />
                     <span className="resume-description-text">- Utilized data visualization tools, such as Python libraries (e.g., Matplotlib, Seaborn), to facilitate easier interpretation and communication of findings</span>
                 </div>

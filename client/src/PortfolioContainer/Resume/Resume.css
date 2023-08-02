@@ -259,3 +259,66 @@
         width: 100%;
     }
 }
+
+/* IPhone RESPONSIVENESS */
+@media only screen and (max-width: 414px) {
+    .resume-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading-date {
+        font-size: 10px;
+    }
+    .resume-main-heading span {
+        font-size: 13px;
+    }
+
+    .resume-sub-heading {
+        font-size: 12px;
+    }
+
+    .resume-heading-description {
+        font-size: 12px;
+    }
+
+    .resume-card {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        align-items: center;
+        width: 90%;
+    }
+
+    .resume-bullet-details {
+        height: 600px;
+        padding: 0;
+        width: fit-content;
+    }
+
+    .resume-bullets {
+        margin: 0 0 0 0;
+        width: 100%;
+    }
+    #education {
+        justify-content: start;
+        .resume-heading {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+        .resume-main-heading span {
+            font-size: 13px;
+        }
+        .resume-sub-heading {
+            font-size: 13px;
+        }
+        .resume-heading-description {
+            font-size: 12px;
+        }
+    }
+    .resume-description-text {
+        font-size: 12px;
+    }
+}

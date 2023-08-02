@@ -95,3 +95,31 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 414px) {
+    .about-me-options {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-me-options button {
+        margin-top: 0;
+        padding: 2%;
+        width: 100%;
+    }
+
+    .about-me-highlights {
+        margin: 30px 0;
+    }
+    .highlght-heading {
+        font-family: "Poppins Bold";
+        font-size: 15px;
+        margin: 0 0 0 0;
+    }
+    .highlight {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 0;
+        font-family: "Poppins Medium";
+    }
+}
