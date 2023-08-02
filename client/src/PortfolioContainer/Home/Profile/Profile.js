@@ -29,7 +29,7 @@ export default function Profile() {
                     <div className="profile-details-role">
                         <span className="primary-text">
                             <h1>
-                                <Typical loop={Infinity} steps={["Passionate Coder 🚀", 2000, "Full stack Developer 💻", 2000, "C++ Enthusiast 💡", 2000]} />
+                                <Typical className="typical-loop" loop={Infinity} steps={["Passionate Coder 🚀", 2000, "Full stack Developer 💻", 2000, "C++ Enthusiast 💡", 2000]} />
                             </h1>
                             <span className="profile-role-tagline">Proficient in building apps with integrated front-end and back-end functionalities</span>
                         </span>

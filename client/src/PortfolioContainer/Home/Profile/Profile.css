@@ -137,7 +137,7 @@
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
     .profile-picture {
         height: 275px;
         width: 275px;
@@ -145,5 +145,8 @@
     }
     .proflie-details {
         width: 95%;
+    }
+    .typical-loop {
+        font-size: 30px;
     }
 }
