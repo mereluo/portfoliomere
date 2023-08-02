@@ -17,7 +17,7 @@ function Resume(props) {
 
     /* REUSABLE MINOR COMPONENTS */
     const ResumeHeading = (props) => {
-        console.log(props);
+        // console.log(props);
         return (
             <div className="resume-heading">
                 <div className="resume-main-heading">

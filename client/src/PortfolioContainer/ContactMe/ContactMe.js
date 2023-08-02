@@ -3,7 +3,7 @@ import Typical from "react-typical";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import imgBack from "../../../src/images/mailz.jpeg";
+// import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
@@ -34,7 +34,7 @@ export default function ContactMe(props) {
     const handleMessage = (e) => {
         setMessage(e.target.value);
     };
-    console.log(name);
+    // console.log(name);
     const submitForm = async (e) => {
         e.preventDefault();
         try {
@@ -79,13 +79,13 @@ export default function ContactMe(props) {
                     </div> */}
                     <form onSubmit={submitForm}>
                         <p>{banner}</p>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Your Name</label>
                         <input type="text" onChange={handleName} value={name} />
 
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Your Email</label>
                         <input type="email" onChange={handleEmail} value={email} />
 
-                        <label htmlFor="message">Message</label>
+                        <label htmlFor="message">Type Your Message Here</label>
                         <textarea type="text" onChange={handleMessage} value={message} />
 
                         <div className="send-btn">
